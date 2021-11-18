@@ -9,7 +9,21 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- Подключаем стили -->
     <link rel="stylesheet" href="css/style.css" />
-    <script src="js/main.js" defer></script>
+    <script type="modyle">
+      import {
+        getAuth,
+        createUserWithEmailAndPassword
+      } from "../firebase/auth";
+      import { initializeApp } from "../firebase/app";
+      import { getDatabase } from "../firebase/database";
+    </script>
+    <!-- // Import the functions you need from the SDKs you need import {
+    initializeApp } from "firebase/app"; // TODO: Add SDKs for Firebase products
+    that you want to use //
+    https://firebase.google.com/docs/web/setup#available-libraries // Your web
+    app's Firebase configuration  -->
+
+    <script type="module" src="js/main.js" defer></script>
   </head>
   <body>
     <!-- Создаем шапку сайта -->
@@ -209,19 +223,24 @@
         </section>
       </main>
 
-      <!-- <form action="#" class="add-post">
+      <form action="#" class="add-post">
         <input
           type="text"
-          name="post-title"
+          name="title"
           class="add-title"
           placeholder="Заголовок поста"
         />
         <textarea
-          name="post-text"
-          id="text"
+          name="text"
           class="add-text"
           placeholder="Текст вашего поста"
         ></textarea>
+        <input
+          type="text"
+          name="tags"
+          class="add-tags"
+          placeholder="Добавьте тэги через запятую"
+        />
         <div class="add-buttons">
           <button type="submit" class="button add-button">
             <svg class="icon icon-fire">
@@ -229,20 +248,8 @@
             </svg>
             Опубликовать пост
           </button>
-          <button class="button button-outline">
-            <svg class="icon icon-video">
-              <use xlink:href="img/icons.svg#video"></use>
-            </svg>
-            Видео
-          </button>
-          <button class="button button-outline">
-            <svg class="icon icon-photo">
-              <use xlink:href="img/icons.svg#photo"></use>
-            </svg>
-            Фото
-          </button>
         </div>
-      </form> -->
+      </form>
       <!-- /.posts -->
       <aside class="sidebar">
         <div class="login">
