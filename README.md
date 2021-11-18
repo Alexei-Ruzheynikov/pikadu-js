@@ -1,5 +1,5 @@
 # pikadu-js
-
+http://pikadu.mainweb-planet.ru/
 indent-rainbow - плагин отступов
 toto tree - плагин пометок
 Есть rest api, а есть rest ful api
